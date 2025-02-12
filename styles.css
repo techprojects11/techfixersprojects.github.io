@@ -1,0 +1,215 @@
+/* Estilo para el header */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para mayor contraste */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 1); /* Cambio al pasar el mouse */
+}
+
+/* Estilo del título */
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #FFD700; /* Color dorado más brillante */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para darle más destaque */
+}
+
+/* Estilo para la estela con variación de colores */
+.cursor-trail {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFD700; /* Color dorado por defecto */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: trail-animation 0.6s ease-out infinite, color-change 1s infinite alternate;
+}
+
+/* Animación para el tamaño de la estela */
+@keyframes trail-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Animación para el cambio de color */
+@keyframes color-change {
+    0% {
+        background-color: #FFD700; /* Dorado */
+    }
+    50% {
+        background-color: #FF6347; /* Tomate */
+    }
+    100% {
+        background-color: #32CD32; /* Verde lima */
+    }
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Color naranja brillante en hover */
+    transform: scale(1.1); /* Efecto de agrandado */
+}
+
+/* Estilo para las secciones */
+section {
+    padding: 50px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para contraste */
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra para hacer que las secciones resalten */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo más oscuro al pasar el mouse */
+    transform: translateY(-10px); /* Efecto de desplazamiento */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para los párrafos */
+section p {
+    font-size: 1.4em;
+    line-height: 1.8em;
+    color: #f0f0f0; /* Blanco cálido para el texto */
+    transition: color 0.3s ease;
+}
+
+section p:hover {
+    color: #ff6600; /* Color naranja brillante en hover */
+}
+
+/* Estilo para la lista de herramientas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05); /* Efecto de agrandado al pasar el mouse */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ff6600; /* Color en hover */
+    transform: translateX(5px); /* Efecto de desplazamiento */
+}
+
+/* Estilo para el formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+form label {
+    margin-bottom: 10px;
+    color: #FFD700;
+    font-size: 1.2em;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    background-color: #333;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff6600; /* Cambio de borde al hacer focus */
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #ff6600; /* Botón de color naranja brillante */
+    color: white;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FFD700; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilo para el footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6600;
+}
